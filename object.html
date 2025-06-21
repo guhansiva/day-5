@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>React in HTML</title>
+  <!-- React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel for JSX support -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <!-- Container for React app -->
+  <div id="root"></div>
+
+  <!-- Your React code using JSX -->
+  <script type="text/babel">
+    const App = () => {
+      return (
+        <div>
+          <h1>Hello from React!</h1>
+          <p>This is rendered using React in an HTML file.</p>
+        </div>
+      );
+    };
+
+    // Render App into the root div
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
